@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Game backlog kotlin</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="dbnames">Database Name</string>
+    <string name="ip">IP</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="release">Release: </string>
+</resources>
