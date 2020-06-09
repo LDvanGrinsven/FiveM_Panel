@@ -24,7 +24,7 @@ const val GET_GAME_DATA = 100
 class MainActivity : AppCompatActivity() {
     private lateinit var mainActivityViewModel: MainActivityViewModel
     private val games = arrayListOf<FiveM>()
-    private val gameAdapter = GameAdapter(games){ five -> onMovieClick(five) }
+    private val gameAdapter = GameAdapter(games){ five -> onSwitchClick(five) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,10 +71,10 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun onMovieClick(five: FiveM) {
-        //val intent = Intent(this, MovieActivity::class.java)
-        //intent.putExtra("MOVIE", five)
-        //startActivity(intent)
+    private fun onSwitchClick(five: FiveM) {
+        val intent = Intent(this, DBRowsActivity::class.java)
+        intent.putExtra("FIVE", five)
+        startActivity(intent)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -92,16 +92,16 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
 
         // Initialize the recycler view with a linear layout manager, adapter
-        rvGames.layoutManager =
+        rvFiveM.layoutManager =
             LinearLayoutManager(this@MainActivity, RecyclerView.VERTICAL, false)
-        rvGames.adapter = gameAdapter
-        rvGames.addItemDecoration(
+        rvFiveM.adapter = gameAdapter
+        rvFiveM.addItemDecoration(
             DividerItemDecoration(
                 this@MainActivity,
                 DividerItemDecoration.VERTICAL
             )
         )
-        createItemTouchHelper().attachToRecyclerView(rvGames)
+        createItemTouchHelper().attachToRecyclerView(rvFiveM)
     }
 
     /**
