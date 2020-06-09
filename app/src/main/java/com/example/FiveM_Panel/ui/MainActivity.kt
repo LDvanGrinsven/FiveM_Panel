@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        AddDB.setOnClickListener { view ->
             System.out.println(gameAdapter.getItemCount())
             val addActivity = Intent(this, AddActivity::class.java)
             startActivityForResult(addActivity,

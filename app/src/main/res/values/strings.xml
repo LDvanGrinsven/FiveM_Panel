@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Game backlog kotlin</string>
+    <string name="app_name">FiveM Panel</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_add">AddActivity</string>
     <string name="dbnames">Database Name</string>
