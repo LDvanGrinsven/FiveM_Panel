@@ -1,8 +1,6 @@
 package com.example.FiveM_Panel.database
 
 import android.os.StrictMode
-import android.widget.Button
-import androidx.room.Update
 import com.example.FiveM_Panel.BuildConfig
 import com.example.FiveM_Panel.ui.DBRowsActivity
 import java.sql.*
@@ -12,7 +10,7 @@ const val EXTRA_ROW = "EXTRA_ROW"
 object JDBCControl{
 
     val drows = arrayListOf<DBRows>()
-    //val rec = DBRowsActivity()
+    val rec = DBRowsActivity()
     var conn: Connection? = null
     var db: String? = null
     var tb: String? = null
@@ -52,7 +50,6 @@ object JDBCControl{
         println(first + last + birth + tall + grouptype)
         val sql = "UPDATE $db.$tb SET firstname='$first', lastname='$last', dateofbirth='$birth', height='$tall', job='$grouptype' WHERE (identifier='$uid')"
         val rs = conn?.createStatement()?.executeUpdate(sql)
-
     }
     private fun StrictModes() {
         if (BuildConfig.DEBUG) {

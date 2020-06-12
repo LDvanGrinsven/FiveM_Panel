@@ -1,8 +1,10 @@
 package com.example.FiveM_Panel.ui
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -15,7 +17,6 @@ import com.example.FiveM_Panel.database.DBRows
 import com.example.FiveM_Panel.database.FiveM
 import com.example.FiveM_Panel.database.JDBCControl
 import com.example.FiveM_Panel.database.JDBCControl.getConnection
-import kotlinx.android.synthetic.main.dbrows_item.*
 import kotlinx.android.synthetic.main.dbrows_main.*
 
 const val FIVE = "FIVE"
@@ -24,7 +25,6 @@ class DBRowsActivity : AppCompatActivity() {
     val rows = arrayListOf<DBRows>()
     private val rowsAdapter = DBRowsAdapter(rows)
     private lateinit var viewModel: DBRowsActivityViewModel
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dbrows)
