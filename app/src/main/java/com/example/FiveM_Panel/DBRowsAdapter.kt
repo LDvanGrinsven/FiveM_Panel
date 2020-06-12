@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.FiveM_Panel.database.DBRows
+import com.example.FiveM_Panel.database.JDBCControl
 import com.example.FiveM_Panel.ui.DBRowsActivity
 import kotlinx.android.synthetic.main.dbrows_item.view.*
 
@@ -45,7 +46,7 @@ class DBRowsAdapter(private val DbList: List<DBRows>) :
             val h = Glide.with(context).load(itemView.tvheight.setText(game.height.toString()))
             val g = Glide.with(context).load(itemView.tvgroup.setText(game.group))
             val btn = Glide.with(context).load(itemView.tvUpdate.setOnClickListener{
-                rec.onRowClick(game,
+                JDBCControl.UpdateRows(
                     itemView.tvuseridentifier.getText().toString(),
                     itemView.tvfirstname.getText().toString(),
                     itemView.tvlastname.getText().toString(),

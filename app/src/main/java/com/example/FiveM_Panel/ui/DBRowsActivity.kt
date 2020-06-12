@@ -18,12 +18,10 @@ import com.example.FiveM_Panel.database.JDBCControl.getConnection
 import kotlinx.android.synthetic.main.dbrows_item.*
 import kotlinx.android.synthetic.main.dbrows_main.*
 
-
 const val FIVE = "FIVE"
 class DBRowsActivity : AppCompatActivity() {
 
     val rows = arrayListOf<DBRows>()
-    var numberOfRows = 0
     private val rowsAdapter = DBRowsAdapter(rows)
     private lateinit var viewModel: DBRowsActivityViewModel
 
@@ -35,10 +33,6 @@ class DBRowsActivity : AppCompatActivity() {
         val table = "users"
         val data = intent.getParcelableExtra<FiveM>(FIVE)
         getConnection(data.DBname, table, data.ipaddress, data.username, data.password)
-    }
-    fun onRowClick(dbrows: DBRows, uid: String, fUpdate: String, lUpdate: String, dobUpdate: String, hUpdate: Int, gUpdate: String){
-        JDBCControl.ReceiveRows(uid, fUpdate, lUpdate, dobUpdate, hUpdate, gUpdate)
-        finish()
     }
     override fun onBackPressed() {
         val returnIntent = Intent()

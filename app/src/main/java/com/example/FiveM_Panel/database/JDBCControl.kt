@@ -48,19 +48,9 @@ object JDBCControl{
                 drows.add(DBRows(rs.getString("identifier"),rs.getString("firstname"), rs.getString("lastname"), rs.getString("dateofbirth"), rs.getInt("height"), rs.getString("job")))
             }
         }
-    fun ReceiveRows(userid: String, first: String, last: String, birth: String, tall: Int, grouptype: String)
-    {
-        var useridReceive = userid
-        var firstnameReceive = first
-        var lastnameReceive = last
-        var dateofbirthReceive = birth
-        var heightReceive = tall
-        var groupReceive = grouptype
-        UpdateRows(db, tb, useridReceive, firstnameReceive, lastnameReceive, dateofbirthReceive, heightReceive, groupReceive)
-    }
-    fun UpdateRows(dataB: String?, table: String?, uid: String, first: String, last: String, birth: String, tall: Int, grouptype: String){
+    fun UpdateRows(uid: String, first: String, last: String, birth: String, tall: Int, grouptype: String){
         println(first + last + birth + tall + grouptype)
-        val sql = "UPDATE $dataB.$table SET firstname='$first', lastname='$last', dateofbirth='$birth', height='$tall', job='$grouptype' WHERE (identifier='$uid')"
+        val sql = "UPDATE $db.$tb SET firstname='$first', lastname='$last', dateofbirth='$birth', height='$tall', job='$grouptype' WHERE (identifier='$uid')"
         val rs = conn?.createStatement()?.executeUpdate(sql)
 
     }
