@@ -33,14 +33,20 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:boxStrokeColor="@color/design_default_color_on_secondary"
+                    app:endIconTint="@color/design_default_color_on_secondary"
+                    app:hintTextColor="@color/design_default_color_on_secondary"
+                    app:startIconTint="@color/design_default_color_on_secondary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tvDBName"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
-                        android:hint="@string/dbnames" />
+                        android:hint="@string/dbnames"
+                        android:textColorHighlight="@color/design_default_color_on_secondary"
+                        android:textColorLink="@color/design_default_color_on_secondary" />
                 </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
@@ -51,14 +57,20 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:boxStrokeColor="@color/design_default_color_on_secondary"
+                    app:endIconTint="@color/design_default_color_on_secondary"
+                    app:hintTextColor="@color/design_default_color_on_secondary"
+                    app:startIconTint="@color/design_default_color_on_secondary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tvIP"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
-                        android:hint="@string/ip" />
+                        android:hint="@string/ip"
+                        android:textColorHighlight="@color/design_default_color_on_secondary"
+                        android:textColorLink="@color/design_default_color_on_secondary" />
                 </com.google.android.material.textfield.TextInputLayout>
             </TableRow>
 
@@ -69,28 +81,40 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:boxStrokeColor="@color/design_default_color_on_secondary"
+                    app:endIconTint="@color/design_default_color_on_secondary"
+                    app:hintTextColor="@color/design_default_color_on_secondary"
+                    app:startIconTint="@color/design_default_color_on_secondary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tvUsername"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
-                        android:hint="@string/username" />
+                        android:hint="@string/username"
+                        android:textColorHighlight="@color/design_default_color_on_secondary"
+                        android:textColorLink="@color/design_default_color_on_secondary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    app:boxStrokeColor="@color/design_default_color_on_secondary"
+                    app:endIconTint="@color/design_default_color_on_secondary"
+                    app:hintTextColor="@color/design_default_color_on_secondary"
+                    app:startIconTint="@color/design_default_color_on_secondary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tvPassword"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="1dp"
+                        android:hint="@string/password"
                         android:inputType="textPassword"
-                        android:hint="@string/password" />
+                        android:textColorHighlight="@color/design_default_color_on_secondary"
+                        android:textColorLink="@color/design_default_color_on_secondary" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </TableRow>
