@@ -48,7 +48,7 @@ class GameAdapter(private val games: List<FiveM>, private val onClick: (FiveM) -
             itemView.tvDBName.setText(game.DBname)
             itemView.tvIP.setText(game.ipaddress)
             itemView.tvUsername.setText(game.username)
-            itemView.tvPassword.setText(game.password)
+            //itemView.tvPassword.setText(game.password)
         }
     }
 }
