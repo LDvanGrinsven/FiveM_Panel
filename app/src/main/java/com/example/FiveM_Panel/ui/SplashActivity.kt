@@ -1,10 +1,10 @@
-package com.example.FiveM_Panel
+package com.example.FiveM_Panel.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.example.FiveM_Panel.ui.MainActivity
+import com.example.FiveM_Panel.R
 
 class SplashActivity : AppCompatActivity() {
 
